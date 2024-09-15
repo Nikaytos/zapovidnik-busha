@@ -1,0 +1,35 @@
+<mat-toolbar class="mat-elevation-z1">
+  <a matRipple  class="logo" routerLink="home">
+    <img src="img/logo.webp" alt="1" width="60px" class="logo-img">
+    <h1 class="logo-text">Заповідник "Буша"</h1>
+  </a>
+
+  <div class="spacer"></div>
+
+  <span class="menu">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <span>
+        <a mat-menu-item routerLink="home">Головна</a>
+        <a mat-menu-item routerLink="oboronno-fortetsya">Оборонна фортеця</a>
+        <a mat-menu-item routerLink="skelnyi-khram">Скельний храм</a>
+        <a mat-menu-item routerLink="park-sculptur">Парк скульптур</a>
+        <a mat-menu-item routerLink="kladovyshche">Середньовічне кладовище</a>
+        <a mat-menu-item routerLink="museum-khata">Музей «Подільська хата»</a>
+        <a mat-menu-item routerLink="haidamatskyi-yar">Гайдамацький яр</a>
+      </span>
+    </mat-menu>
+  </span>
+
+  <div class="list">
+    <a mat-stroked-button routerLink="home">Головна</a>
+    <a mat-stroked-button routerLink="home">Оборонна фортеця</a>
+    <a mat-stroked-button routerLink="home">Скельний храм</a>
+    <a mat-stroked-button routerLink="home">Парк скульптур</a>
+    <a mat-stroked-button routerLink="home">Середньовічне кладовище</a>
+    <a mat-stroked-button routerLink="home">Музей «Подільська хата»</a>
+    <a mat-stroked-button routerLink="home">Гайдамацький яр</a>
+  </div>
+</mat-toolbar>

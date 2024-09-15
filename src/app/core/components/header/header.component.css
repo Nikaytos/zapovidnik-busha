@@ -1,0 +1,49 @@
+mat-toolbar {
+  height: 100px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logo-img {
+  border-radius: 50%;
+  border: 2px solid gray;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px;
+  border-radius: 9999px;
+}
+
+.logo:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.list {
+  display: flex;
+  gap: 5px;
+}
+
+@media screen and (max-width: 425px) {
+  .logo-text {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1549px) {
+  .list {
+    display: none;
+  }
+}
