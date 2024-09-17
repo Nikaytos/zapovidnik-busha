@@ -11,6 +11,11 @@ mat-toolbar {
   border: 2px solid gray;
 }
 
+.logo-text {
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -28,6 +33,10 @@ mat-toolbar {
 .list {
   display: flex;
   gap: 5px;
+}
+
+.mat-mdc-menu-item-text {
+  font-family: "Merriweather", serif;
 }
 
 @media screen and (max-width: 425px) {

@@ -1,0 +1,15 @@
+.header {
+  font-family: "Merriweather", serif;
+}
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 425px) {
+  .img {
+    width: 125px;
+  }
+}
