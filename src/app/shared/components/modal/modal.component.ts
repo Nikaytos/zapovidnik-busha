@@ -16,7 +16,6 @@ export class ModalComponent {
   @Input() isModalOpen = false;
   @Output() closeModalEvent = new EventEmitter<void>();
 
-  // Метод для закриття модального вікна
   closeModal(): void {
     this.closeModalEvent.emit();
   }

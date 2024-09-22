@@ -3,6 +3,7 @@ import {SlickCarouselModule} from "ngx-slick-carousel";
 import {NgClass, NgForOf} from "@angular/common";
 import {MatIcon} from "@angular/material/icon";
 import {ModalComponent} from "../../../shared/components/modal/modal.component";
+import {FooterComponent} from "../../../core/components/footer/footer.component";
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,8 @@ import {ModalComponent} from "../../../shared/components/modal/modal.component";
     NgForOf,
     NgClass,
     MatIcon,
-    ModalComponent
+    ModalComponent,
+    FooterComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
