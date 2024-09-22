@@ -19,19 +19,31 @@ import {ModalComponent} from "../../../shared/components/modal/modal.component";
 })
 export class HomeComponent {
   slides = [
-    {img: "img/img1.png", caption: 'Image 1'},
-    {img: "img/img1.png", caption: 'Image 2'},
-    {img: "img/img1.png", caption: 'Image 3'},
-    {img: "img/img1.png", caption: 'Image 4'},
-    {img: "img/img1.png", caption: 'Image 5'},
-    {img: "img/img1.png", caption: 'Image 6'},
-    {img: "img/img1.png", caption: 'Image 7'}
+    {lowImg: "img/lowImg1.webp", caption: 'Орел на скелі'},
+    {lowImg: "img/lowImg3.webp", caption: 'А.Микитюк. Тарас Завісний'},
+    {lowImg: "img/lowImg4.webp", caption: 'М.Худолій. Оберіг часу'},
+    {lowImg: "img/lowImg9.webp", caption: 'А.Микитюк. Кобзар'},
+    {lowImg: "img/lowImg2.webp", caption: 'Скельний храм'},
+    {lowImg: "img/lowImg6.webp", caption: 'Хрест на середньовічному кладовищі'},
+    {lowImg: "img/lowImg5.webp", caption: 'Оборонна фортеця'},
+  ]
+
+  collage = [
+    {lowImg: "img/lowImg1.webp", highImg: "img/highImg1.webp", caption: 'Орел на скелі'},
+    {lowImg: "img/lowImg9.webp", highImg: "img/highImg9.webp", caption: 'А.Микитюк. Кобзар'},
+    {lowImg: "img/lowImg4.webp", highImg: "img/highImg4.webp", caption: 'М.Худолій. Оберіг часу'},
+    {lowImg: "img/lowImg3.webp", highImg: "img/highImg3.webp", caption: 'А.Микитюк. Тарас Завісний'},
+    {lowImg: "img/lowImg5.webp", highImg: "img/highImg5.webp", caption: 'Оборонна фортеця'},
+    {lowImg: "img/lowImg6.webp", highImg: "img/highImg6.webp", caption: 'Хрест на середньовічному кладовищі'},
+    {lowImg: "img/lowImg7.webp", highImg: "img/highImg7.webp", caption: 'Музей "Подільська хата"'},
+    {lowImg: "img/lowImg8.webp", highImg: "img/highImg8.webp", caption: 'Гайдамацький яр'},
+    {lowImg: "img/lowImg2.webp", highImg: "img/highImg2.webp", caption: 'Скельний храм'}
   ]
 
   slideConfig = {
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -41,6 +53,12 @@ export class HomeComponent {
     lazyLoad: "ondemand",
     centerMode: true,
     responsive: [
+      {
+        breakpoint: 1609,
+        settings: {
+          slidesToShow: 5,
+        }
+      },
       {
         breakpoint: 1064,
         settings: {

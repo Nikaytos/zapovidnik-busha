@@ -2,6 +2,7 @@ mat-toolbar {
   height: 100px;
   display: flex;
   position: fixed;
+  z-index: 2;
 }
 
 .spacer {
@@ -10,7 +11,7 @@ mat-toolbar {
 
 .logo-img {
   border-radius: 50%;
-  border: 2px solid gray;
+  border: 1px solid #dadada;
 }
 
 .logo-text {
@@ -47,13 +48,13 @@ mat-toolbar {
   }
 }
 
-@media screen and (min-width: 1550px) {
+@media screen and (min-width: 1700px) {
   .menu {
     display: none;
   }
 }
 
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1699px) {
   .list {
     display: none;
   }

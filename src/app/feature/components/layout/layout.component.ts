@@ -24,7 +24,8 @@ export class LayoutComponent {
   pageId = '';
   title = '';
   text: string[] = [];
-  img = '';
+  lowImg = '';
+  highImg = '';
   loading = true;
 
   ngOnInit(): void {
@@ -38,7 +39,8 @@ export class LayoutComponent {
         if (pageData) {
           this.title = pageData.title;
           this.text = pageData.text;
-          this.img = pageData.img;
+          this.lowImg = pageData.lowImg;
+          this.highImg = pageData.highImg;
         }
 
         this.loading = false;
@@ -49,7 +51,8 @@ export class LayoutComponent {
   clearPageData(): void {
     this.title = '';
     this.text = [];
-    this.img = '';
+    this.lowImg = '';
+    this.highImg = '';
   }
 
   isModalOpen = false;

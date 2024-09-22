@@ -1,3 +1,34 @@
+.content-wrapper {
+  position: relative;
+  color: white; /* Робимо текст білим */
+  padding: 20px;
+  z-index: 1;
+}
+
+.content-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.content-wrapper {
+  background-image: url('/img/background.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.about-left,
+.about-right {
+  z-index: 1; /* Щоб текст був поверх затемненого фону */
+}
+
 .img-style {
   margin: 0 auto;
   width: 100%;
@@ -12,5 +43,53 @@
   cursor: grab;
 }
 
+.about {
+  display: flex;
+  margin: 0 auto;
+  gap: 10px;
+  width: 1400px;
+  max-width: 100%;
+}
 
+.about-left {
+  width: 40%;
+  text-align: left;
+}
 
+.about-right {
+  width: 60%;
+  padding: 0 20px;
+}
+
+.photo-collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.collage-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.collage-img:hover {
+  transform: scale(1.04);
+}
+
+@media screen and (max-width: 860px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about-left {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .about-right {
+    width: 100%;
+  }
+}

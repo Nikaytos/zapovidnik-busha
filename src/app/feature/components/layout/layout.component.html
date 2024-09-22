@@ -12,7 +12,7 @@
       <div *ngIf="!loading">
         <h3 class="header">{{ title }}</h3>
         <div class="text-justify">
-          <img [src]=img class="img float-start me-3 mb-3 border rounded" width="200px" (click)="openModal(img, title)">
+          <img [src]=lowImg class="img float-start me-3 mb-3 border rounded" width="300px" height="300px" (click)="openModal(highImg, title)">
           <p *ngFor="let p of text">{{ p }}</p>
         </div>
         <app-modal [imageSrc]="selectedImage"
