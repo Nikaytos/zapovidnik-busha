@@ -1,1 +1,23 @@
-<p>home works!</p>
+<div class="container-fluid">
+  <div class="row justify-content-center text-center" >
+    <div class="col-12 p-0" style="margin-top: 100px">
+      <div class="pt-2 pb-2 ps-1 pe-1 mat-elevation-z1">
+        <ngx-slick-carousel class="carousel"
+                            #slickModal="slick-carousel"
+                            [config]="slideConfig">
+          <div ngxSlickItem *ngFor="let slide of slides" style="margin: 0 2px">
+            <img [src]="slide.img" [alt]="slide.caption" class="img-style" (click)="openModal(slide.img, slide.caption)">
+          </div>
+        </ngx-slick-carousel>
+        <app-modal [imageSrc]="selectedImage"
+                   [caption]="selectedCaption"
+                   [isModalOpen]="isModalOpen"
+                   (closeModalEvent)="closeModal()">
+        </app-modal>
+      </div>
+      <div class="p-1 mat-elevation-z1 p-2 bg-body-secondary">
+        <h2 class="pt-3 fs-4 fw-bold lh-base text-uppercase">Державний історико-культурний заповідник "Буша"</h2>
+      </div>
+    </div>
+  </div>
+</div>

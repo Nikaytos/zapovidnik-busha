@@ -1,0 +1,16 @@
+.img-style {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.lb-details {
+  display: none !important;
+}
+
+.carousel {
+  cursor: grab;
+}
+
+
+

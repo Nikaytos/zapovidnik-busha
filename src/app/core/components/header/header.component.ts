@@ -6,6 +6,7 @@ import {RouterLink} from "@angular/router";
 import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatRipple} from "@angular/material/core";
+import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-header',
@@ -20,11 +21,12 @@ import {MatRipple} from "@angular/material/core";
     MatMenu,
     MatMenuItem,
     FlexLayoutModule,
-    MatRipple
+    MatRipple,
+    NgClass
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+  elevation: string = 'mat-elevation-z1';
 }

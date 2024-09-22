@@ -1,4 +1,7 @@
-<mat-toolbar class="mat-elevation-z1">
+<mat-toolbar class="bg-body-secondary"
+             [ngClass]="elevation"
+             (mouseover)="elevation='mat-elevation-z5'"
+             (mouseout)="elevation='mat-elevation-z1'">
   <a matRipple class="logo" routerLink="">
     <img src="img/logo.webp" alt="1" width="60px" class="logo-img">
     <h1 class="logo-text">Заповідник "Буша"</h1>

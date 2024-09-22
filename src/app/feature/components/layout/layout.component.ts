@@ -3,6 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {LayoutService} from "../../services/layout.service";
 import {NgForOf, NgIf} from "@angular/common";
 import {MatProgressSpinner} from "@angular/material/progress-spinner";
+import {ModalComponent} from "../../../shared/components/modal/modal.component";
 
 @Component({
   selector: 'app-layout',
@@ -10,7 +11,8 @@ import {MatProgressSpinner} from "@angular/material/progress-spinner";
   imports: [
     NgForOf,
     MatProgressSpinner,
-    NgIf
+    NgIf,
+    ModalComponent
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
@@ -48,5 +50,21 @@ export class LayoutComponent {
     this.title = '';
     this.text = [];
     this.img = '';
+  }
+
+  isModalOpen = false;
+  selectedImage: string | null = null;
+  selectedCaption: string | null = null;
+
+  openModal(image: string, caption: string): void {
+    this.selectedImage = image;
+    this.selectedCaption = caption;
+    this.isModalOpen = true;
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+    this.selectedImage = null;
+    this.selectedCaption = null;
   }
 }

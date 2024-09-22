@@ -1,0 +1,7 @@
+<div class="modal" [ngClass]="{'show': isModalOpen}" (click)="closeModal()">
+  <span class="close" (click)="closeModal()">&times;</span>
+
+  <!-- Зображення всередині модального вікна -->
+  <img class="modal-content" [src]="imageSrc" alt="Modal Image">
+  <div id="caption">{{ caption }}</div>
+</div>
