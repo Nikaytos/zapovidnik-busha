@@ -1,6 +1,6 @@
 {
   "name": "zapovidnik-busha",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -26,7 +26,7 @@
     "jquery": "^3.7.1",
     "ngx-bootstrap": "^18.0.2",
     "ngx-lightbox": "^3.0.0",
-    "ngx-slick-carousel": "^17.0.0",
+    "ngx-slick-carousel-ver2": "^18.0.1",
     "rxjs": "~7.8.0",
     "slick-carousel": "^1.8.1",
     "tslib": "^2.3.0",

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {SlickCarouselModule} from "ngx-slick-carousel";
+import {SlickCarouselModule} from "ngx-slick-carousel-ver2";
 import {NgClass, NgForOf} from "@angular/common";
 import {MatIcon} from "@angular/material/icon";
 import {ModalComponent} from "../../../shared/components/modal/modal.component";

@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {LayoutService} from "../../services/layout.service";
 import {NgForOf, NgIf} from "@angular/common";
@@ -17,7 +17,7 @@ import {ModalComponent} from "../../../shared/components/modal/modal.component";
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
 })
-export class LayoutComponent {
+export class LayoutComponent implements OnInit {
   route: ActivatedRoute = inject(ActivatedRoute);
   layoutService: LayoutService = inject(LayoutService);
 
@@ -27,6 +27,9 @@ export class LayoutComponent {
   lowImg = '';
   highImg = '';
   loading = true;
+  isModalOpen = false;
+  selectedImage: string | null = null;
+  selectedCaption: string | null = null;
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -54,10 +57,6 @@ export class LayoutComponent {
     this.lowImg = '';
     this.highImg = '';
   }
-
-  isModalOpen = false;
-  selectedImage: string | null = null;
-  selectedCaption: string | null = null;
 
   openModal(image: string, caption: string): void {
     this.selectedImage = image;
