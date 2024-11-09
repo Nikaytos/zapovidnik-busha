@@ -27,7 +27,7 @@ export class HomeComponent {
     {lowImg: "img/lowImg9.webp", caption: 'А.Микитюк. Кобзар'},
     {lowImg: "img/lowImg2.webp", caption: 'Скельний храм'},
     {lowImg: "img/lowImg6.webp", caption: 'Хрест на середньовічному кладовищі'},
-    {lowImg: "img/lowImg5.webp", caption: 'Оборонна фортеця'},
+    {lowImg: "img/lowImg10.webp", caption: 'О.Пірняк. Трипільська богиня'},
   ]
 
   collage = [
